@@ -3,9 +3,9 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 
-$host = "	sql206.byethost9.com";
+$host = "sql206.byethost9.com";
 $user = "b9_28370872";
-$pass = "@Anivat2334";
+$pass = "@Anivat238841";
 $db= "b9_28370872_member";
 
 try{

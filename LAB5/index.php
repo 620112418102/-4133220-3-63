@@ -1,7 +1,7 @@
 <?php
 
-include "./conDB.php";
-$strSQL = "SELECT * FROM tb_member";
+include "./conBD.php";
+$strSQL = "SELECT * FROM member";
 
 try {
     $result = $conn->query($strSQL);
@@ -31,7 +31,7 @@ try {
             <th>ลำดับ</th>
             <th>ชื่อ-สกุล</th>
             <th>ปีเกิด</th>
-            <th>อายุ</th>
+            <!-- <th>อายุ</th> -->
             <th></th>
         </thead>
         <tbody>
@@ -43,10 +43,8 @@ try {
                     <td><?= $i++ ?></td>
                     <td><?= $rows[0] . $rows[1] ?>></td>
                     <td><?= $rows[2] ?></td>
-                    <td>
-                        <?date("Y") - $rows[2]?>
-                    </td>
-                    <td></td>
+                    <!-- <td><?=date("Y") - $rows[2]?></td> -->
+                    <td> <a href="add.php?id=<?= $rows[0]?>">ADD</a></td>
 
                 </tr>
             <?php
